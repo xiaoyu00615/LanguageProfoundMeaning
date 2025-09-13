@@ -17,6 +17,8 @@ def shen_fn():
     print("感谢代子岩助力，成功验证SSH！OvO")
     win.create_window()
 
+    print("新代码")
+    print('新新新！')
 
 
 
