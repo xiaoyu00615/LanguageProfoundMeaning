@@ -12,6 +12,12 @@ def main_program():
     win.create_window()
 
 
+def shen_fn():
+    print("2025.9.13.")
+    print("感谢代子岩助力，成功验证SSH！OvO")
+    win.create_window()
+
+
 
 
 
