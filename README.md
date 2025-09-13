@@ -20,5 +20,16 @@
 
 # 3.打包项目
 ```bash
-    pyinstaller
+    pyinstaller --onefile --windowed --name=我的程序 main.py
+```
+
+# 4.项目依赖
+## 4.1 生成依赖文件
+```
+    pip freeze > requirements.txt
+```
+
+# 4.2下载依赖文件
+```
+    pip install -r requirements.txt
 ```
