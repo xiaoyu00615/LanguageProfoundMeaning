@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-
+# 新窗口
 def create_window():
     # 创建主窗口
     root = tk.Tk()
