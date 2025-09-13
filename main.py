@@ -10,6 +10,7 @@ def main_program():
     print('主程序')
     print_hi("你好")
     win.create_window()
+    shen_fn()
 
 
 def shen_fn():
@@ -20,6 +21,9 @@ def shen_fn():
     print("新代码")
     print('新新新！')
 
+
+    print("新分支")
+    print('新代码')
 
 
 
