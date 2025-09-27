@@ -2,8 +2,7 @@
 problem_date = r'--- 问题 --- \d{4}/\d{1,2}/\d{1,2}'
 
 # 含义内容
-meaning_content =  r'内容含义:'
+meaning_content = r'\d+、.*'
 
-
-# 测试多行匹配
-problem_line = r'.*'
+# 题目
+topic_data = r'\d+\..*'

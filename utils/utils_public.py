@@ -1,34 +1,36 @@
 import re
-from pathlib import Path
 
-import utils.regx as regx
-
-
-# 读取文件内容
-def reading_file(file_name):
-    try:
-        with open(file_name,'r',encoding='utf-8') as file:
-            content = file.read()
-            # print(content)
-    except FileNotFoundError:
-        print('错误：文件不存在')
-    except Exception as e:
-        print(f"发生错误：{e}")
-    return content
-
-    # content = Path(file_name).read_text(encoding='utf-8')
-    # # print(content)
-    # normalized_text = content.replace('\r\n', '\n').replace('\r', '\n')
-    # return normalized_text
+from utils import regx
+from utils.regx import meaning_content
 
 
+def regx_json(arr_lines):
+    regx_data = []
+    regx_meaning = []
+    regx_topic = []
 
 
-def regx_json(str_txt):
+    for line in arr_lines:
+        # print(line)
 
-    # print(str_txt)
-    content = re.search(regx.meaning_content, str_txt)
-    print(content)
+        # 获取时间日期
+        if re.search(regx.problem_date,line):
+            regx_data.append(line)
+
+        # 获取含义内容
+        if re.search(regx.meaning_content,line):
+            regx_meaning.append(line)
+
+        # 获取题目
+        if re.search(regx.topic_data, line):
+            regx_topic.append(line)
+
+    return {
+        'regx_data' :regx_data,
+        'regx_meaning' :regx_meaning,
+        'regx_topic' :regx_topic
+    }
+
 
 
 
